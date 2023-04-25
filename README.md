@@ -55,17 +55,13 @@ The Model finds it fairly difficult to tell the difference between a real and an
 
 One thing that i will do to confirm this hypothesis is to look do a multi-class training and verify the results instead of a binary training. This might clear up on which "edited" class is actually causing the issue.
 
-![image](https://user-images.githubusercontent.com/110474064/234380131-86a8f8ba-94ef-4e8d-b664-56aa32657609.png)
-
-![image](https://user-images.githubusercontent.com/110474064/234380148-6f2ca755-1ddc-4be0-aed2-c3518fbb584d.png)
+![image](https://user-images.githubusercontent.com/110474064/234380131-86a8f8ba-94ef-4e8d-b664-56aa32657609.png)![image](https://user-images.githubusercontent.com/110474064/234380148-6f2ca755-1ddc-4be0-aed2-c3518fbb584d.png)
 
 Deepfake VS Facetune:
 
 This Model works very well with a high accuracy, which makes me believe that the model finds it easier differentiating between the 2 signatures of the deepfake vs facetune editing as opposed to the Real VS Edited usecase. 
 
-![image](https://user-images.githubusercontent.com/110474064/234381970-ab87208a-e6a8-4f53-b4a7-bc2ce2adda27.png)
-
-![image](https://user-images.githubusercontent.com/110474064/234381999-b6da28b6-0ba4-4d3d-91d2-3d025df97081.png)
+![image](https://user-images.githubusercontent.com/110474064/234381970-ab87208a-e6a8-4f53-b4a7-bc2ce2adda27.png)![image](https://user-images.githubusercontent.com/110474064/234381999-b6da28b6-0ba4-4d3d-91d2-3d025df97081.png)
 
 
 
