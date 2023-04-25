@@ -63,10 +63,39 @@ This Model works very well with a high accuracy, which makes me believe that the
 
 ![image](https://user-images.githubusercontent.com/110474064/234381970-ab87208a-e6a8-4f53-b4a7-bc2ce2adda27.png)![image](https://user-images.githubusercontent.com/110474064/234381999-b6da28b6-0ba4-4d3d-91d2-3d025df97081.png)
 
+## User Guide: 
 
+This is a web app deployed using Azure and created using gradio. Click on the below link to explore!
 
 [editdetect.azurewebsites.net ](https://editdetect.azurewebsites.net/?)
 
+If you have images of your own, you can upload them to the UI or you can use the list of examples randomly sampled from the test data (the models havent seen this data yet).
 
-Edited image detection
-https://duke.box.com/s/ca2usi4foz9ama3pkp2rc5sm9ue9lv9q 
+Demo Video: https://duke.box.com/s/ksm6uhdasmenijbb4o5mrklpn3jfl07y 
+
+# Replication:
+
+If you want to replicate this, use the above mentioned data sources and you can find the fine tuned models here - https://duke.box.com/s/ca2usi4foz9ama3pkp2rc5sm9ue9lv9q 
+
+## Future Enhancements:
+
+1. Recreate the dataset using same original images ,passing them through the DGAN architecture to create facetuned datasets and through the faceswap project to create the deepfake datasets. Retrain the model.
+
+2. Create a web API so that this functionality can be integrated with other social media image sharing apps where images can be flagged as being “edited” as a discretionary viewer warning.
+
+3. Integrate this with engagement rates to define impact of the edited image for better flagging with appropriate warning.
+
+## References:
+
+1. Data and data creation process flow for facetune : Identifying Human Edited Images using a CNN by Jordan Lee et. al. 
+
+ https://arxiv.org/ftp/arxiv/papers/2101/2101.03275.pdf
+ 
+2. Deepfakes creation project using Faceswap : https://github.com/deepfakes/faceswap 
+
+3. Deployment ref - https://datasciencedojo.com/blog/web_app_for_gradio/
+
+4. https://github.com/AIPI540/AIPI540-Deep-Learning-Applications by Prof. Jon Reifschneider : for code reference
+
+
+ 
