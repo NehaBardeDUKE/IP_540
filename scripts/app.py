@@ -53,11 +53,12 @@ def model_pred_sw(img):
 demo = gr.Blocks()
 
 with demo:
+    gr.Markdown("""# Edited Image Detection""")
     img = gr.Image(type="pil")
     pred_1 = gr.Label(num_top_classes=2, label="Predictions")
     b1 = gr.Button("Is this image REAL or is it EDITED")
     pred_2 = gr.Label(num_top_classes=2, label="Predictions")
-    b2 = gr.Button("What was it created using", visible=True)
+    b2 = gr.Button("What was it created using if it is Edited", visible=True)
     
     def recognize_pred_1(inputs):
         pred_dict = model_pred(inputs)
@@ -78,4 +79,4 @@ with demo:
     examples = gr.Examples(
         examples=example_paths,
         inputs=img)
-demo.launch(server_name="0.0.0.0",server_port=7000)
+demo.launch(server_name="0.0.0.0",server_port=8000)
