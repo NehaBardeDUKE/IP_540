@@ -73,7 +73,7 @@ If you have images of your own, you can upload them to the UI or you can use the
 
 Demo Video: https://duke.box.com/s/ksm6uhdasmenijbb4o5mrklpn3jfl07y 
 
-# Replication:
+## Replication:
 
 If you want to replicate this, use the above mentioned data sources and you can find the fine tuned models here - https://duke.box.com/s/ca2usi4foz9ama3pkp2rc5sm9ue9lv9q 
 
