@@ -33,7 +33,42 @@ For the deepfake vs facetune dataset, equal number of images were sampled from t
 
 In both cases the files were randomly split into train, test and val sets. Any files that threw "UnidentifiedImage" Exception were deleted as these were likely corrupted and could not be read by the PIL library.
 
-##
+## Modeling Approaches:
+
+### Non - DL approach:
+I chose to implement this approach using SVM. The accuracy was very slightly better than the DL approach but the drawbacks fairly outweigh the positives. 
+![image](https://user-images.githubusercontent.com/110474064/234378330-3fbdfbc1-aacb-4f79-8993-e4fccddaf7c4.png)
+
+1. Since the entire data is loaded into memory for processing, I observed frequent kernel crashes even for a small amount of data.
+2. The data resolution had to be reduced if any calculations were to be made.
+3. If the data resolution was retained, the number of data points sent through the classifier had to be reduced. 
+4. The training was very slow as it was only using CPU.
+
+If this is to work, a more sophisticated data flow needs to be designed that would make use of GPU for parallelizable repeatable calcultaions.
+
+### DL approach:
+Here I chose to use the Resnet 152 pretrained model, that would later be fine tuned using 2 separate datasets to generate 2 separate models.
+
+Real VS Edited:
+
+The Model finds it fairly difficult to tell the difference between a real and an edited image. I hypothesize that the model is finding it hard to differentiate between a signature of the app being present and absent in the images. This model underperforms from the current benchmark of 67% as published in various papers. It should be noted though, that these articles seldom consider different kinds of edited images as is the case with this dataset.
+
+One thing that i will do to confirm this hypothesis is to look do a multi-class training and verify the results instead of a binary training. This might clear up on which "edited" class is actually causing the issue.
+
+![image](https://user-images.githubusercontent.com/110474064/234380131-86a8f8ba-94ef-4e8d-b664-56aa32657609.png)
+
+![image](https://user-images.githubusercontent.com/110474064/234380148-6f2ca755-1ddc-4be0-aed2-c3518fbb584d.png)
+
+Deepfake VS Facetune:
+
+This Model works very well with a high accuracy, which makes me believe that the model finds it easier differentiating between the 2 signatures of the deepfake vs facetune editing as opposed to the Real VS Edited usecase. 
+
+![image](https://user-images.githubusercontent.com/110474064/234381970-ab87208a-e6a8-4f53-b4a7-bc2ce2adda27.png)
+
+![image](https://user-images.githubusercontent.com/110474064/234381999-b6da28b6-0ba4-4d3d-91d2-3d025df97081.png)
+
+
+
 [editdetect.azurewebsites.net ](https://editdetect.azurewebsites.net/?)
 
 
