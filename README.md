@@ -34,6 +34,8 @@ For the deepfake vs facetune dataset, equal number of images were sampled from t
 In both cases the files were randomly split into train, test and val sets. Any files that threw "UnidentifiedImage" Exception were deleted as these were likely corrupted and could not be read by the PIL library.
 
 ##
-editdetect.azurewebsites.net 
+[editdetect.azurewebsites.net ](https://editdetect.azurewebsites.net/?)
+
+
 Edited image detection
 https://duke.box.com/s/ca2usi4foz9ama3pkp2rc5sm9ue9lv9q 
